@@ -1,10 +1,9 @@
 /* General Styles */
-body {
+body, html {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  height: 100%;
   background-color: white;
 }
 
@@ -15,28 +14,42 @@ body {
 }
 
 /* Navbar */
-.w3-top {
+.navbar {
+  background-color: #d50000;
+  color: white;
+  padding: 10px;
   position: fixed;
   width: 100%;
+  top: 0;
   z-index: 1000;
 }
 
-.w3-bar {
-  background-color: #d50000 !important;
-  color: white;
-  padding: 10px;
+.navbar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
-.w3-button {
-  color: white !important;
+.navbar-link {
+  color: white;
+  text-decoration: none;
   margin: 0 10px;
+}
+
+.navbar-link:hover {
+  text-decoration: underline;
 }
 
 /* Header */
 .header {
   text-align: center;
-  padding: 20px;
-  margin-top: 60px; /* Adjust for fixed navbar */
+  padding: 80px 20px 20px; /* Adjust padding for fixed navbar */
+}
+
+.header-image {
+  width: 200px;
+  height: auto;
 }
 
 /* Content */
@@ -44,6 +57,8 @@ body {
   flex: 1;
   padding: 20px;
   text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Employee Login Section */
@@ -60,6 +75,27 @@ body {
   border-radius: 10px;
   max-width: 400px;
   width: 100%;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-button {
+  background-color: #d50000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #b71c1c;
 }
 
 /* Customer Page Section */

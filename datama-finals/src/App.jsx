@@ -8,18 +8,18 @@ const App = () => {
   return (
     <div className="app-container">
       {/* Navbar */}
-      <div className="w3-top">
-        <div className="w3-bar w3-card">
+      <div className="navbar">
+        <div className="navbar-content">
           <a
             href="#home"
-            className="w3-bar-item w3-button"
+            className="navbar-link"
             onClick={() => setShowCustomerPage(false)} // Show Employee Login
           >
             <b>Shell</b> Employee Portal
           </a>
           <a
             href="#customer"
-            className="w3-bar-item w3-button"
+            className="navbar-link"
             onClick={() => setShowCustomerPage(true)} // Show Customer Page
           >
             Customer Page
@@ -30,10 +30,9 @@ const App = () => {
       {/* Header */}
       <header className="header">
         <img
-          className="w3-image"
           src="https://i.pinimg.com/736x/1c/77/a6/1c77a66033942e5f45f3172ff1cfd4eb.jpg"
           alt="Shell"
-          width="200"
+          className="header-image"
         />
       </header>
 
@@ -45,9 +44,9 @@ const App = () => {
             <div className="login-container">
               <h3>Employee Login</h3>
               <form action="#" method="POST">
-                <input className="w3-input w3-border" type="text" placeholder="Employee ID" required />
-                <input className="w3-input w3-border w3-margin-top" type="password" placeholder="Password" required />
-                <button className="w3-button shell-red w3-margin-top" type="submit">
+                <input className="input-field" type="text" placeholder="Employee ID" required />
+                <input className="input-field" type="password" placeholder="Password" required />
+                <button className="login-button" type="submit">
                   Login
                 </button>
               </form>
