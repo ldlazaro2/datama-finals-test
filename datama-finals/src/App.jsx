@@ -1,16 +1,27 @@
-import React from "react";
-import "./App.css"; // You can create a separate CSS file for styling
+import React, { useState } from "react";
+import "./App.css"; // Ensure you have this CSS file for styling
 
 const App = () => {
+  // State to manage which page is displayed
+  const [showCustomerPage, setShowCustomerPage] = useState(false);
+
   return (
     <div>
       {/* Navbar */}
       <div className="w3-top">
         <div className="w3-bar w3-card">
-          <a href="#home" className="w3-bar-item w3-button">
+          <a
+            href="#home"
+            className="w3-bar-item w3-button"
+            onClick={() => setShowCustomerPage(false)} // Show Employee Login
+          >
             <b>Shell</b> Employee Portal
           </a>
-          <a href="#customer" className="w3-bar-item w3-button">
+          <a
+            href="#customer"
+            className="w3-bar-item w3-button"
+            onClick={() => setShowCustomerPage(true)} // Show Customer Page
+          >
             Customer Page
           </a>
         </div>
@@ -29,51 +40,55 @@ const App = () => {
       {/* Page Content */}
       <div className="w3-content w3-padding content" style={{ maxWidth: "1200px" }}>
         {/* Employee Login Section */}
-        <div className="w3-container w3-padding-32 w3-center" id="employee">
-          <div className="login-container w3-padding">
-            <h3>Employee Login</h3>
-            <form action="#" method="POST">
-              <input className="w3-input w3-border" type="text" placeholder="Employee ID" required />
-              <input className="w3-input w3-border w3-margin-top" type="password" placeholder="Password" required />
-              <button className="w3-button shell-red w3-margin-top" type="submit">
-                Login
-              </button>
-            </form>
+        {!showCustomerPage && (
+          <div className="w3-container w3-padding-32 w3-center" id="employee">
+            <div className="login-container w3-padding">
+              <h3>Employee Login</h3>
+              <form action="#" method="POST">
+                <input className="w3-input w3-border" type="text" placeholder="Employee ID" required />
+                <input className="w3-input w3-border w3-margin-top" type="password" placeholder="Password" required />
+                <button className="w3-button shell-red w3-margin-top" type="submit">
+                  Login
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Customer Section */}
-        <div className="w3-container w3-padding-32 w3-center" id="customer" style={{ display: "none" }}>
-          <h2>Customer Page</h2>
-          <p>Check out our latest gas prices in Philippine Peso (PHP):</p>
+        {showCustomerPage && (
+          <div className="w3-container w3-padding-32 w3-center" id="customer">
+            <h2>Customer Page</h2>
+            <p>Check out our latest gas prices in Philippine Peso (PHP):</p>
 
-          <div className="w3-row-padding w3-margin-top">
-            <div className="w3-third">
-              <div className="w3-card">
-                <img src="https://via.placeholder.com/100" alt="Unleaded" />
-                <div className="w3-container">
-                  <p className="gas-price">Unleaded: ₱50.00</p>
+            <div className="w3-row-padding w3-margin-top">
+              <div className="w3-third">
+                <div className="w3-card">
+                  <img src="https://via.placeholder.com/100" alt="Unleaded" />
+                  <div className="w3-container">
+                    <p className="gas-price">Unleaded: ₱50.00</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="w3-third">
-              <div className="w3-card">
-                <img src="https://via.placeholder.com/100" alt="Diesel" />
-                <div className="w3-container">
-                  <p className="gas-price">Diesel: ₱45.00</p>
+              <div className="w3-third">
+                <div className="w3-card">
+                  <img src="https://via.placeholder.com/100" alt="Diesel" />
+                  <div className="w3-container">
+                    <p className="gas-price">Diesel: ₱45.00</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="w3-third">
-              <div className="w3-card">
-                <img src="https://via.placeholder.com/100" alt="Premium" />
-                <div className="w3-container">
-                  <p className="gas-price">Premium: ₱55.00</p>
+              <div className="w3-third">
+                <div className="w3-card">
+                  <img src="https://via.placeholder.com/100" alt="Premium" />
+                  <div className="w3-container">
+                    <p className="gas-price">Premium: ₱55.00</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
 
       {/* Footer */}
