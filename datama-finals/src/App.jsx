@@ -5,40 +5,36 @@ const App = () => {
   const [showCustomerPage, setShowCustomerPage] = useState(false);
 
   return (
-    <div className="app-container">
+    <div className="app">
       {/* Navbar */}
-      <div className="navbar">
-        <a
-          href="#home"
-          className="navbar-link"
-          onClick={() => setShowCustomerPage(false)}
-        >
-          <b>Shell</b> Employee Portal
-        </a>
-        <a
-          href="#customer"
-          className="navbar-link"
-          onClick={() => setShowCustomerPage(true)}
-        >
-          Customer Page
-        </a>
-      </div>
+      <nav className="navbar">
+        <div className="navbar-left">
+          <a href="#home" onClick={() => setShowCustomerPage(false)}>
+            <b>Shell</b> Employee Portal
+          </a>
+        </div>
+        <div className="navbar-right">
+          <a href="#customer" onClick={() => setShowCustomerPage(true)}>
+            Customer Page
+          </a>
+        </div>
+      </nav>
 
       {/* Header */}
       <header className="header">
         <img
           src="https://i.pinimg.com/736x/1c/77/a6/1c77a66033942e5f45f3172ff1cfd4eb.jpg"
-          alt="Shell"
-          className="header-image"
+          alt="Shell Logo"
+          className="logo"
         />
       </header>
 
-      {/* Page Content */}
-      <div className="content">
+      {/* Main Content */}
+      <main className="main-content">
         {/* Employee Login Section */}
         {!showCustomerPage && (
-          <div className="employee-login">
-            <h3>Employee Login</h3>
+          <div className="login-section">
+            <h2>Employee Login</h2>
             <form>
               <input type="text" placeholder="Employee ID" required />
               <input type="password" placeholder="Password" required />
@@ -47,28 +43,28 @@ const App = () => {
           </div>
         )}
 
-        {/* Customer Section */}
+        {/* Customer Page Section */}
         {showCustomerPage && (
-          <div className="customer-page">
+          <div className="customer-section">
             <h2>Customer Page</h2>
             <p>Check out our latest gas prices in Philippine Peso (PHP):</p>
-            <div className="gas-price-grid">
-              <div className="gas-price-card">
+            <div className="price-cards">
+              <div className="card">
                 <img src="https://via.placeholder.com/100" alt="Unleaded" />
                 <p>Unleaded: ₱50.00</p>
               </div>
-              <div className="gas-price-card">
+              <div className="card">
                 <img src="https://via.placeholder.com/100" alt="Diesel" />
                 <p>Diesel: ₱45.00</p>
               </div>
-              <div className="gas-price-card">
+              <div className="card">
                 <img src="https://via.placeholder.com/100" alt="Premium" />
                 <p>Premium: ₱55.00</p>
               </div>
             </div>
           </div>
         )}
-      </div>
+      </main>
 
       {/* Footer */}
       <footer className="footer">

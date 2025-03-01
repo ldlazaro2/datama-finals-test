@@ -7,7 +7,7 @@ body, html {
   background-color: white;
 }
 
-.app-container {
+.app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -27,13 +27,13 @@ body, html {
   z-index: 1000;
 }
 
-.navbar-link {
+.navbar a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-.navbar-link:hover {
+.navbar a:hover {
   text-decoration: underline;
 }
 
@@ -43,13 +43,13 @@ body, html {
   padding: 100px 20px 20px; /* Adjusted for fixed navbar */
 }
 
-.header-image {
+.logo {
   width: 200px;
   height: auto;
 }
 
-/* Content */
-.content {
+/* Main Content */
+.main-content {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -59,7 +59,7 @@ body, html {
 }
 
 /* Employee Login Section */
-.employee-login {
+.login-section {
   background-color: #e0e0e0;
   padding: 20px;
   border-radius: 10px;
@@ -67,11 +67,11 @@ body, html {
   width: 100%;
 }
 
-.employee-login h3 {
+.login-section h2 {
   margin-bottom: 20px;
 }
 
-.employee-login input {
+.login-section input {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
@@ -79,7 +79,7 @@ body, html {
   border-radius: 5px;
 }
 
-.employee-login button {
+.login-section button {
   background-color: #d50000;
   color: white;
   padding: 10px 20px;
@@ -88,29 +88,29 @@ body, html {
   cursor: pointer;
 }
 
-.employee-login button:hover {
+.login-section button:hover {
   background-color: #b71c1c;
 }
 
 /* Customer Page Section */
-.customer-page {
+.customer-section {
   width: 100%;
   max-width: 1200px;
   padding: 20px;
 }
 
-.customer-page h2 {
+.customer-section h2 {
   margin-bottom: 20px;
 }
 
-.gas-price-grid {
+.price-cards {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-.gas-price-card {
+.card {
   background-color: #f5f5f5;
   padding: 20px;
   border-radius: 10px;
@@ -119,13 +119,13 @@ body, html {
   min-width: 200px;
 }
 
-.gas-price-card img {
+.card img {
   width: 100px;
   height: auto;
   margin-bottom: 10px;
 }
 
-.gas-price-card p {
+.card p {
   font-size: 1.2em;
   font-weight: bold;
 }
