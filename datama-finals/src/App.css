@@ -55,6 +55,9 @@ body, html {
 /* Content */
 .content {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
   text-align: center;
   max-width: 1200px;
@@ -63,18 +66,14 @@ body, html {
 
 /* Employee Login Section */
 .employee-login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  width: 100%;
+  max-width: 400px;
 }
 
 .login-container {
   background-color: #e0e0e0;
   padding: 20px;
   border-radius: 10px;
-  max-width: 400px;
-  width: 100%;
 }
 
 .input-field {
@@ -101,6 +100,7 @@ body, html {
 /* Customer Page Section */
 .customer-page {
   text-align: center;
+  width: 100%;
 }
 
 .gas-price-grid {
