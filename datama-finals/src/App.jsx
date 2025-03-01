@@ -6,7 +6,7 @@ const App = () => {
   const [showCustomerPage, setShowCustomerPage] = useState(false);
 
   return (
-    <div>
+    <div className="app-container">
       {/* Navbar */}
       <div className="w3-top">
         <div className="w3-bar w3-card">
@@ -28,7 +28,7 @@ const App = () => {
       </div>
 
       {/* Header */}
-      <header className="w3-display-container w3-content w3-wide" style={{ maxWidth: "1500px" }} id="home">
+      <header className="header">
         <img
           className="w3-image"
           src="https://i.pinimg.com/736x/1c/77/a6/1c77a66033942e5f45f3172ff1cfd4eb.jpg"
@@ -38,11 +38,11 @@ const App = () => {
       </header>
 
       {/* Page Content */}
-      <div className="w3-content w3-padding content" style={{ maxWidth: "1200px", marginTop: "80px" }}>
+      <div className="content">
         {/* Employee Login Section */}
         {!showCustomerPage && (
-          <div className="w3-container w3-padding-32 w3-center" id="employee">
-            <div className="login-container w3-padding">
+          <div className="employee-login">
+            <div className="login-container">
               <h3>Employee Login</h3>
               <form action="#" method="POST">
                 <input className="w3-input w3-border" type="text" placeholder="Employee ID" required />
@@ -57,34 +57,22 @@ const App = () => {
 
         {/* Customer Section */}
         {showCustomerPage && (
-          <div className="w3-container w3-padding-32 w3-center" id="customer">
+          <div className="customer-page">
             <h2>Customer Page</h2>
             <p>Check out our latest gas prices in Philippine Peso (PHP):</p>
 
-            <div className="w3-row-padding w3-margin-top">
-              <div className="w3-third">
-                <div className="w3-card">
-                  <img src="https://via.placeholder.com/100" alt="Unleaded" />
-                  <div className="w3-container">
-                    <p className="gas-price">Unleaded: ₱50.00</p>
-                  </div>
-                </div>
+            <div className="gas-price-grid">
+              <div className="gas-price-card">
+                <img src="https://via.placeholder.com/100" alt="Unleaded" />
+                <p className="gas-price">Unleaded: ₱50.00</p>
               </div>
-              <div className="w3-third">
-                <div className="w3-card">
-                  <img src="https://via.placeholder.com/100" alt="Diesel" />
-                  <div className="w3-container">
-                    <p className="gas-price">Diesel: ₱45.00</p>
-                  </div>
-                </div>
+              <div className="gas-price-card">
+                <img src="https://via.placeholder.com/100" alt="Diesel" />
+                <p className="gas-price">Diesel: ₱45.00</p>
               </div>
-              <div className="w3-third">
-                <div className="w3-card">
-                  <img src="https://via.placeholder.com/100" alt="Premium" />
-                  <div className="w3-container">
-                    <p className="gas-price">Premium: ₱55.00</p>
-                  </div>
-                </div>
+              <div className="gas-price-card">
+                <img src="https://via.placeholder.com/100" alt="Premium" />
+                <p className="gas-price">Premium: ₱55.00</p>
               </div>
             </div>
           </div>
@@ -92,7 +80,7 @@ const App = () => {
       </div>
 
       {/* Footer */}
-      <footer className="w3-center w3-black w3-padding-16">
+      <footer className="footer">
         <p>Shell Employee Portal | Powered by Shell</p>
       </footer>
     </div>
