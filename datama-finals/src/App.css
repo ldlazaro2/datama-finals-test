@@ -3,15 +3,25 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.w3-top {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
 .w3-bar {
   background-color: #d50000 !important;
   color: white;
+  padding: 10px;
 }
 
 .w3-button {
   color: white !important;
+  margin: 0 10px;
 }
 
 .shell-red {
@@ -23,14 +33,21 @@ body {
   background-color: #e0e0e0;
   padding: 20px;
   border-radius: 10px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .content {
   flex: 1;
+  padding-top: 80px; /* Add padding to avoid overlap with the fixed navbar */
 }
 
 footer {
   margin-top: auto;
+  background-color: black;
+  color: white;
+  padding: 16px;
+  text-align: center;
 }
 
 .gas-price {
@@ -42,4 +59,21 @@ footer {
   width: 100px;
   height: auto;
   margin-right: 10px;
+}
+
+.w3-card {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.w3-row-padding {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.w3-third {
+  width: 30%;
 }

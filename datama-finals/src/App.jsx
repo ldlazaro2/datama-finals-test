@@ -38,7 +38,7 @@ const App = () => {
       </header>
 
       {/* Page Content */}
-      <div className="w3-content w3-padding content" style={{ maxWidth: "1200px" }}>
+      <div className="w3-content w3-padding content" style={{ maxWidth: "1200px", marginTop: "80px" }}>
         {/* Employee Login Section */}
         {!showCustomerPage && (
           <div className="w3-container w3-padding-32 w3-center" id="employee">
